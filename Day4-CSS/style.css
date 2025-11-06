@@ -1,0 +1,32 @@
+  body {
+      background-color: black;
+      color: white;
+  }
+
+  h1 {
+      color: blue;
+      font-style: italic;
+  }
+
+
+  .base-heading{
+    color: chartreuse;
+    font-size: 32px;
+  }
+
+  #base-text{
+    font-size: 20px;
+  }
+
+
+  p{
+    color: blue;
+  }
+
+  .c1{
+    color: green;
+  }
+
+  #id1{
+    color :steelblue;
+  }

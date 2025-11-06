@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 2: Flexbox Alignment Properties</title>
+    <link rel="stylesheet" href="step2-flexbox-alignment.css">
+</head>
+
+<body>
+    <h1>Step 2: Flexbox Alignment</h1>
+    <p class="description">Learn how to align items along the main axis and cross axis using justify-content and align-items.</p>
+
+    <!-- JUSTIFY CONTENT EXAMPLES -->
+    <div class="section-header">
+        <h2>Part A: justify-content (Main Axis Alignment)</h2>
+        <p class="explanation">Controls how items are distributed along the MAIN axis (horizontal for row, vertical for column)</p>
+    </div>
+
+    <!-- Example 1: flex-start -->
+    <section>
+        <h3>1. justify-content: flex-start (default)</h3>
+        <p class="explanation">Items packed at the start of the main axis</p>
+        <div class="flex-container justify-start">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+    </section>
+
+    <!-- Example 2: flex-end -->
+    <section>
+        <h3>2. justify-content: flex-end</h3>
+        <p class="explanation">Items packed at the end of the main axis</p>
+        <div class="flex-container justify-end">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+    </section>
+
+    <!-- Example 3: center -->
+    <section>
+        <h3>3. justify-content: center</h3>
+        <p class="explanation">Items centered along the main axis</p>
+        <div class="flex-container justify-center">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+    </section>
+
+    <!-- Example 4: space-between -->
+    <section>
+        <h3>4. justify-content: space-between</h3>
+        <p class="explanation">Items evenly distributed; first item at start, last at end</p>
+        <div class="flex-container justify-between">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+            <div class="flex-item">4</div>
+        </div>
+    </section>
+
+    <!-- Example 5: space-around -->
+    <section>
+        <h3>5. justify-content: space-around</h3>
+        <p class="explanation">Items evenly distributed with equal space around them</p>
+        <div class="flex-container justify-around">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+    </section>
+
+    <!-- Example 6: space-evenly -->
+    <section>
+        <h3>6. justify-content: space-evenly</h3>
+        <p class="explanation">Items with equal space between and around them</p>
+        <div class="flex-container justify-evenly">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+    </section>
+
+    <!-- ALIGN ITEMS EXAMPLES -->
+    <div class="section-header">
+        <h2>Part B: align-items (Cross Axis Alignment)</h2>
+        <p class="explanation">Controls how items are aligned along the CROSS axis (vertical for row, horizontal for column)</p>
+    </div>
+
+    <!-- Example 7: stretch -->
+    <section>
+        <h3>7. align-items: stretch (default)</h3>
+        <p class="explanation">Items stretch to fill the container (if no height is set)</p>
+        <div class="flex-container align-stretch">
+            <div class="flex-item-no-height">1</div>
+            <div class="flex-item-no-height">2</div>
+            <div class="flex-item-no-height">3</div>
+        </div>
+    </section>
+
+    <!-- Example 8: flex-start -->
+    <section>
+        <h3>8. align-items: flex-start</h3>
+        <p class="explanation">Items aligned to the start of cross axis</p>
+        <div class="flex-container align-start">
+            <div class="flex-item">1</div>
+            <div class="flex-item tall">2<br>Tall</div>
+            <div class="flex-item">3</div>
+        </div>
+    </section>
+
+    <!-- Example 9: flex-end -->
+    <section>
+        <h3>9. align-items: flex-end</h3>
+        <p class="explanation">Items aligned to the end of cross axis</p>
+        <div class="flex-container align-end">
+            <div class="flex-item">1</div>
+            <div class="flex-item tall">2<br>Tall</div>
+            <div class="flex-item">3</div>
+        </div>
+    </section>
+
+    <!-- Example 10: center -->
+    <section>
+        <h3>10. align-items: center</h3>
+        <p class="explanation">Items centered along cross axis</p>
+        <div class="flex-container align-center">
+            <div class="flex-item">1</div>
+            <div class="flex-item tall">2<br>Tall</div>
+            <div class="flex-item">3</div>
+        </div>
+    </section>
+
+    <!-- Example 11: Combining Both -->
+    <section>
+        <h3>11. Perfect Centering (justify-content + align-items: center)</h3>
+        <p class="explanation">Combining both properties to center items perfectly</p>
+        <div class="flex-container perfect-center">
+            <div class="flex-item">Perfectly Centered!</div>
+        </div>
+    </section>
+
+    <!-- Key Takeaways -->
+    <section class="key-points">
+        <h2>Key Takeaways:</h2>
+        <ul>
+            <li><strong>justify-content</strong> - Aligns items along the MAIN axis (horizontal for row)</li>
+            <li><strong>align-items</strong> - Aligns items along the CROSS axis (vertical for row)</li>
+            <li><strong>flex-start</strong> - Pack items at the start</li>
+            <li><strong>flex-end</strong> - Pack items at the end</li>
+            <li><strong>center</strong> - Center items</li>
+            <li><strong>space-between</strong> - Space between items, edges touching container</li>
+            <li><strong>space-around</strong> - Equal space around each item</li>
+            <li><strong>space-evenly</strong> - Equal space everywhere</li>
+            <li><strong>stretch</strong> - Stretch items to fill container</li>
+        </ul>
+    </section>
+
+    <div class="navigation">
+        <a href="step1-flexbox-basics.html">← Previous: Flexbox Basics</a>
+        <a href="index.html">Back to Home</a>
+        <a href="step3-flexbox-wrap.html">Next: Flex Wrap & Properties →</a>
+    </div>
+</body>
+
+</html>

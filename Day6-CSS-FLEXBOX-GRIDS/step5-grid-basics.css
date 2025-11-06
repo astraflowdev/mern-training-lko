@@ -1,0 +1,232 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #34495e;
+    margin-top: 30px;
+}
+
+.description,
+.explanation {
+    color: #666;
+    font-size: 14px;
+    margin: 10px 0;
+    font-style: italic;
+}
+
+section {
+    background: white;
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Base Grid Container */
+.grid-container {
+    /* display: grid is the key property */
+    display: grid;
+
+    /* Visual styling */
+    background-color: #3498db;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+/* Grid Item Styles */
+.grid-item {
+    background-color: #e74c3c;
+    color: white;
+    padding: 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+}
+
+/* EXAMPLE 1: Basic 3-column grid */
+.grid-3-col {
+    /* Three equal columns using fr units */
+    grid-template-columns: 1fr 1fr 1fr;
+    /* 1fr = 1 fraction of available space */
+    gap: 10px;
+}
+
+/* EXAMPLE 2: Different column widths */
+.grid-diff-cols {
+    /* First column takes 2 fractions, others take 1 */
+    grid-template-columns: 2fr 1fr 1fr;
+    /* Total = 4 fractions
+       Column 1 = 2/4 = 50% of space
+       Column 2 = 1/4 = 25% of space
+       Column 3 = 1/4 = 25% of space */
+    gap: 10px;
+}
+
+/* EXAMPLE 3: Fixed and flexible columns */
+.grid-fixed-flex {
+    /* Mix of pixel values and fr units */
+    grid-template-columns: 200px 1fr 150px;
+    /* Column 1 = always 200px
+       Column 2 = takes remaining space
+       Column 3 = always 150px */
+    gap: 10px;
+}
+
+/* EXAMPLE 4: Repeat function */
+.grid-repeat {
+    /* Instead of: 1fr 1fr 1fr 1fr */
+    grid-template-columns: repeat(4, 1fr);
+    /* repeat(count, pattern) */
+    /* Creates 4 columns, each 1fr wide */
+    gap: 10px;
+}
+
+/* EXAMPLE 5: Grid gap */
+.grid-with-gap {
+    grid-template-columns: repeat(3, 1fr);
+    /* gap property adds space between grid items */
+    gap: 20px;
+    /* Modern CSS uses 'gap', old property was 'grid-gap' */
+}
+
+/* EXAMPLE 6: Different row and column gaps */
+.grid-diff-gaps {
+    grid-template-columns: repeat(3, 1fr);
+    /* gap: row-gap column-gap */
+    gap: 30px 10px;
+    /* 30px between rows, 10px between columns */
+
+    /* Alternative way to write it:
+    row-gap: 30px;
+    column-gap: 10px;
+    */
+}
+
+/* EXAMPLE 7: Explicit rows */
+.grid-rows {
+    grid-template-columns: repeat(3, 1fr);
+    /* Explicitly define row heights */
+    grid-template-rows: 100px 150px;
+    /* First row = 100px tall
+       Second row = 150px tall
+       Additional rows = auto height */
+    gap: 10px;
+}
+
+/* EXAMPLE 8: Auto-fit with minmax (responsive grid) */
+.grid-auto-fit {
+    /* Automatically creates columns based on available space */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* auto-fit: fit as many columns as possible
+       minmax(200px, 1fr):
+         - minimum width = 200px
+         - maximum width = 1fr (fill available space)
+       Result: Responsive grid without media queries! */
+    gap: 15px;
+}
+
+/* Code Explanation Box */
+.code-box {
+    background-color: #f8f9fa;
+    border-left: 4px solid #9b59b6;
+    padding: 15px 20px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.code-box code {
+    display: block;
+    background-color: #2d2d2d;
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+}
+
+.code-box .note {
+    color: #666;
+    font-size: 13px;
+    margin: 10px 0 0 0;
+    font-style: italic;
+}
+
+/* Key Points Section */
+.key-points {
+    background-color: #f3e5f5;
+    border-left: 4px solid #9c27b0;
+}
+
+.key-points ul {
+    line-height: 2;
+    list-style: none;
+    padding-left: 0;
+}
+
+.key-points li {
+    padding-left: 30px;
+    position: relative;
+}
+
+.key-points li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #9c27b0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.key-points strong {
+    color: #6a1b9a;
+    font-family: monospace;
+    background-color: #e1bee7;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.navigation a:hover {
+    background-color: #3498db;
+    color: white;
+}

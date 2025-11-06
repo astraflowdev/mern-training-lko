@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 5: CSS Grid Basics</title>
+    <link rel="stylesheet" href="step5-grid-basics.css">
+</head>
+
+<body>
+    <h1>Step 5: CSS Grid Basics</h1>
+    <p class="description">CSS Grid is a two-dimensional layout system for creating complex, responsive layouts with rows and columns.</p>
+
+    <!-- Example 1: Basic Grid -->
+    <section>
+        <h2>1. Basic Grid - 3 Columns</h2>
+        <p class="explanation">Creating a simple 3-column grid with equal widths</p>
+        <div class="grid-container grid-3-col">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+        </div>
+        <div class="code-box">
+            <code>grid-template-columns: 1fr 1fr 1fr;</code>
+            <p class="note">1fr = 1 fraction of available space</p>
+        </div>
+    </section>
+
+    <!-- Example 2: Different Column Widths -->
+    <section>
+        <h2>2. Different Column Widths</h2>
+        <p class="explanation">Columns with different proportions using fr units</p>
+        <div class="grid-container grid-diff-cols">
+            <div class="grid-item">1 (2fr)</div>
+            <div class="grid-item">2 (1fr)</div>
+            <div class="grid-item">3 (1fr)</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+        </div>
+        <div class="code-box">
+            <code>grid-template-columns: 2fr 1fr 1fr;</code>
+            <p class="note">First column is twice as wide as others</p>
+        </div>
+    </section>
+
+    <!-- Example 3: Fixed and Flexible Columns -->
+    <section>
+        <h2>3. Fixed and Flexible Columns</h2>
+        <p class="explanation">Mixing fixed pixel widths with flexible fr units</p>
+        <div class="grid-container grid-fixed-flex">
+            <div class="grid-item">1 (200px)</div>
+            <div class="grid-item">2 (flexible)</div>
+            <div class="grid-item">3 (150px)</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+        </div>
+        <div class="code-box">
+            <code>grid-template-columns: 200px 1fr 150px;</code>
+            <p class="note">Sidebars fixed, main content flexible</p>
+        </div>
+    </section>
+
+    <!-- Example 4: Repeat Function -->
+    <section>
+        <h2>4. Repeat Function</h2>
+        <p class="explanation">Using repeat() to avoid repetition</p>
+        <div class="grid-container grid-repeat">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+        </div>
+        <div class="code-box">
+            <code>grid-template-columns: repeat(4, 1fr);</code>
+            <p class="note">Creates 4 equal columns - shorter syntax!</p>
+        </div>
+    </section>
+
+    <!-- Example 5: Grid Gap -->
+    <section>
+        <h2>5. Grid Gap (Spacing)</h2>
+        <p class="explanation">Adding space between grid items using gap property</p>
+        <div class="grid-container grid-with-gap">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+        </div>
+        <div class="code-box">
+            <code>gap: 20px;</code>
+            <p class="note">gap replaces old grid-gap property</p>
+        </div>
+    </section>
+
+    <!-- Example 6: Different Row and Column Gaps -->
+    <section>
+        <h2>6. Different Row & Column Gaps</h2>
+        <p class="explanation">Setting different gaps for rows and columns</p>
+        <div class="grid-container grid-diff-gaps">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+        </div>
+        <div class="code-box">
+            <code>gap: 30px 10px;</code>
+            <p class="note">First value is row gap, second is column gap</p>
+        </div>
+    </section>
+
+    <!-- Example 7: Explicit Rows -->
+    <section>
+        <h2>7. Grid Template Rows</h2>
+        <p class="explanation">Defining explicit row heights</p>
+        <div class="grid-container grid-rows">
+            <div class="grid-item">1 (100px tall)</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3 (150px tall)</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+        </div>
+        <div class="code-box">
+            <code>
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: 100px 150px;
+            </code>
+            <p class="note">First row 100px, second row 150px</p>
+        </div>
+    </section>
+
+    <!-- Example 8: Auto-fit and minmax -->
+    <section>
+        <h2>8. Responsive Grid with auto-fit and minmax</h2>
+        <p class="explanation">Grid automatically adjusts columns based on available space</p>
+        <div class="grid-container grid-auto-fit">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+        </div>
+        <div class="code-box">
+            <code>grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));</code>
+            <p class="note">Automatically creates columns, min 200px, max 1fr. Try resizing window!</p>
+        </div>
+    </section>
+
+    <!-- Key Takeaways -->
+    <section class="key-points">
+        <h2>Key Takeaways:</h2>
+        <ul>
+            <li><strong>display: grid</strong> - Creates a grid container</li>
+            <li><strong>grid-template-columns</strong> - Defines column sizes</li>
+            <li><strong>grid-template-rows</strong> - Defines row sizes</li>
+            <li><strong>fr unit</strong> - Fraction of available space (1fr, 2fr, etc.)</li>
+            <li><strong>repeat(count, size)</strong> - Repeat pattern without writing it multiple times</li>
+            <li><strong>gap</strong> - Space between grid items (replaces grid-gap)</li>
+            <li><strong>minmax(min, max)</strong> - Sets minimum and maximum size constraints</li>
+            <li><strong>auto-fit</strong> - Automatically fits columns into available space</li>
+            <li>Grid is best for two-dimensional layouts (rows AND columns)</li>
+        </ul>
+    </section>
+
+    <div class="navigation">
+        <a href="step4-flexbox-navbar.html">← Previous: Flexbox Practical</a>
+        <a href="index.html">Back to Home</a>
+        <a href="step6-grid-areas.html">Next: Grid Areas & Placement →</a>
+    </div>
+</body>
+
+</html>

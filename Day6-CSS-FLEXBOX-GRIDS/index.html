@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 6: CSS Flexbox & Grid</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="page-header">
+            <h1>Day 6: CSS Flexbox & Grid</h1>
+            <p class="subtitle">Master modern CSS layout techniques step by step</p>
+        </header>
+
+        <section class="intro">
+            <h2>Welcome to Modern CSS Layouts!</h2>
+            <p>This comprehensive tutorial will teach you two of the most powerful CSS layout systems: <strong>Flexbox</strong> and <strong>Grid</strong>.</p>
+            <p>Work through each step sequentially to build a solid foundation in modern CSS layout techniques.</p>
+        </section>
+
+        <!-- Flexbox Section -->
+        <section class="lessons-section flexbox-section">
+            <h2>📦 Flexbox (One-Dimensional Layouts)</h2>
+            <p class="section-description">Perfect for layouts in a single direction - either rows or columns.</p>
+
+            <div class="lessons-grid">
+                <a href="step1-flexbox-basics.html" class="lesson-card">
+                    <div class="lesson-number">Step 1</div>
+                    <h3>Flexbox Basics</h3>
+                    <p>Introduction to flex containers and flex-direction property</p>
+                    <ul class="lesson-topics">
+                        <li>display: flex</li>
+                        <li>flex-direction (row, column, reverse)</li>
+                        <li>Understanding main and cross axis</li>
+                    </ul>
+                    <span class="lesson-cta">Start Learning →</span>
+                </a>
+
+                <a href="step2-flexbox-alignment.html" class="lesson-card">
+                    <div class="lesson-number">Step 2</div>
+                    <h3>Flexbox Alignment</h3>
+                    <p>Master alignment properties for precise positioning</p>
+                    <ul class="lesson-topics">
+                        <li>justify-content (main axis)</li>
+                        <li>align-items (cross axis)</li>
+                        <li>Perfect centering techniques</li>
+                    </ul>
+                    <span class="lesson-cta">Continue Learning →</span>
+                </a>
+
+                <a href="step3-flexbox-wrap.html" class="lesson-card">
+                    <div class="lesson-number">Step 3</div>
+                    <h3>Flex Wrap & Properties</h3>
+                    <p>Control wrapping and individual item behavior</p>
+                    <ul class="lesson-topics">
+                        <li>flex-wrap, flex-grow, flex-shrink</li>
+                        <li>flex-basis and flex shorthand</li>
+                        <li>Responsive layouts with wrapping</li>
+                    </ul>
+                    <span class="lesson-cta">Continue Learning →</span>
+                </a>
+
+                <a href="step4-flexbox-navbar.html" class="lesson-card">
+                    <div class="lesson-number">Step 4</div>
+                    <h3>Practical Flexbox</h3>
+                    <p>Real-world examples and common patterns</p>
+                    <ul class="lesson-topics">
+                        <li>Navigation bars</li>
+                        <li>Card layouts</li>
+                        <li>Footer layouts</li>
+                    </ul>
+                    <span class="lesson-cta">See Examples →</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Grid Section -->
+        <section class="lessons-section grid-section">
+            <h2>🎯 CSS Grid (Two-Dimensional Layouts)</h2>
+            <p class="section-description">Perfect for complex layouts with both rows and columns.</p>
+
+            <div class="lessons-grid">
+                <a href="step5-grid-basics.html" class="lesson-card">
+                    <div class="lesson-number">Step 5</div>
+                    <h3>Grid Basics</h3>
+                    <p>Introduction to CSS Grid fundamentals</p>
+                    <ul class="lesson-topics">
+                        <li>display: grid</li>
+                        <li>grid-template-columns/rows</li>
+                        <li>fr units, repeat(), gap</li>
+                    </ul>
+                    <span class="lesson-cta">Start Learning →</span>
+                </a>
+
+                <a href="step6-grid-areas.html" class="lesson-card">
+                    <div class="lesson-number">Step 6</div>
+                    <h3>Grid Areas & Placement</h3>
+                    <p>Advanced placement and named grid areas</p>
+                    <ul class="lesson-topics">
+                        <li>grid-template-areas</li>
+                        <li>Item placement with line numbers</li>
+                        <li>Spanning and overlapping</li>
+                    </ul>
+                    <span class="lesson-cta">Continue Learning →</span>
+                </a>
+
+                <a href="step7-grid-dashboard.html" class="lesson-card">
+                    <div class="lesson-number">Step 7</div>
+                    <h3>Complete Dashboard</h3>
+                    <p>Build a real-world dashboard layout</p>
+                    <ul class="lesson-topics">
+                        <li>Complex layout example</li>
+                        <li>Combining Grid and Flexbox</li>
+                        <li>Best practices</li>
+                    </ul>
+                    <span class="lesson-cta">See Example →</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Quick Reference -->
+        <section class="quick-reference">
+            <h2>📚 Quick Reference</h2>
+
+            <div class="reference-grid">
+                <div class="reference-card">
+                    <h3>When to Use Flexbox</h3>
+                    <ul>
+                        <li>Navigation bars and menus</li>
+                        <li>Card layouts that wrap</li>
+                        <li>Aligning items in a row or column</li>
+                        <li>Distributing space between elements</li>
+                        <li>One-dimensional layouts</li>
+                    </ul>
+                </div>
+
+                <div class="reference-card">
+                    <h3>When to Use Grid</h3>
+                    <ul>
+                        <li>Page layouts (header, sidebar, main, footer)</li>
+                        <li>Dashboards and admin panels</li>
+                        <li>Photo galleries with precise placement</li>
+                        <li>Complex two-dimensional layouts</li>
+                        <li>Overlapping elements</li>
+                    </ul>
+                </div>
+
+                <div class="reference-card">
+                    <h3>Key Flexbox Properties</h3>
+                    <ul>
+                        <li><code>display: flex</code></li>
+                        <li><code>flex-direction</code></li>
+                        <li><code>justify-content</code></li>
+                        <li><code>align-items</code></li>
+                        <li><code>flex-wrap</code></li>
+                        <li><code>flex: grow shrink basis</code></li>
+                    </ul>
+                </div>
+
+                <div class="reference-card">
+                    <h3>Key Grid Properties</h3>
+                    <ul>
+                        <li><code>display: grid</code></li>
+                        <li><code>grid-template-columns</code></li>
+                        <li><code>grid-template-rows</code></li>
+                        <li><code>grid-template-areas</code></li>
+                        <li><code>gap</code></li>
+                        <li><code>grid-area</code></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <p>Happy Learning! 🚀</p>
+            <p class="small-text">Day 6 of MERN Stack Training</p>
+        </footer>
+    </div>
+</body>
+
+</html>

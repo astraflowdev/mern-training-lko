@@ -1,0 +1,250 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #34495e;
+    margin-top: 30px;
+}
+
+h3 {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+h4 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+}
+
+.description,
+.explanation {
+    color: #666;
+    font-size: 14px;
+    margin: 10px 0;
+    font-style: italic;
+}
+
+.section-header {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 20px;
+    margin: 30px 0 20px 0;
+    border-radius: 8px;
+}
+
+.section-header h2 {
+    color: white;
+    margin: 0;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Base Flex Container */
+.flex-container {
+    display: flex;
+    background-color: #3498db;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 5px;
+    min-height: 100px;
+}
+
+/* FLEX WRAP EXAMPLES */
+
+/* Default - all items on one line */
+.wrap-nowrap {
+    flex-wrap: nowrap; /* This is default - items will shrink to fit */
+}
+
+/* Items wrap to new lines when needed */
+.wrap-wrap {
+    flex-wrap: wrap;
+}
+
+/* Items wrap in reverse order */
+.wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+/* Gap between items (modern CSS) */
+.gap {
+    gap: 15px; /* Space between flex items */
+}
+
+/* Base Flex Item */
+.flex-item {
+    background-color: #e74c3c;
+    color: white;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    min-width: 120px;
+}
+
+/* FLEX GROW EXAMPLES */
+
+/* flex-grow: 0 (default) - item doesn't grow */
+/* .flex-item already has this by default */
+
+/* flex-grow: 1 - item grows to fill available space */
+.grow-1 {
+    flex-grow: 1;
+    background-color: #27ae60;
+}
+
+/* flex-grow: 2 - item grows twice as much as flex-grow: 1 */
+.grow-2 {
+    flex-grow: 2;
+    background-color: #f39c12;
+}
+.grow-3 {
+    flex-grow: 3;
+    background-color: #2c3e50;
+}
+
+/* FLEX SHRINK EXAMPLES */
+
+/* Wide items to demonstrate shrinking */
+.wide {
+    min-width: 300px;
+}
+
+/* flex-shrink: 0 - item won't shrink */
+.no-shrink {
+    flex-shrink: 0;
+    background-color: #9b59b6;
+}
+
+/* FLEX BASIS EXAMPLES */
+
+/* flex-basis sets the initial size of the item */
+.basis-100 {
+    flex-basis: 100px;
+    min-width: unset;
+}
+
+.basis-150 {
+    flex-basis: 150px;
+    min-width: unset;
+}
+
+.basis-200 {
+    flex-basis: 200px;
+    min-width: unset;
+}
+
+/* FLEX SHORTHAND EXAMPLES */
+
+/* flex: grow shrink basis */
+
+/* Default flex value */
+.flex-0-1-auto {
+    flex: 0 1 auto;
+    /* grow: 0, shrink: 1, basis: auto */
+}
+
+/* Common shorthand - item will grow */
+.flex-1 {
+    flex: 1;
+    /* Equivalent to: flex: 1 1 0 */
+    /* grow: 1, shrink: 1, basis: 0 */
+    background-color: #27ae60;
+}
+
+.flex-2 {
+    flex: 2;
+    /* Equivalent to: flex: 2 1 0 */
+    /* grow: 2, shrink: 1, basis: 0 */
+    background-color: #f39c12;
+}
+
+/* PRACTICAL CARD EXAMPLE */
+.card {
+    background-color: white;
+    border: 2px solid #e74c3c;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1 1 200px;
+    /* grow: 1, shrink: 1, basis: 200px */
+    /* This means:
+       - Cards will grow to fill space
+       - Cards will shrink if needed
+       - Starting size is 200px
+       - Combined with flex-wrap, creates responsive layout
+    */
+    min-width: 200px;
+}
+
+.card h4 {
+    color: #e74c3c;
+}
+
+.card p {
+    color: #666;
+    margin: 0;
+}
+
+/* Key Points Section */
+.key-points {
+    background-color: #e8f5e9;
+    border-left: 4px solid #4caf50;
+}
+
+.key-points ul {
+    line-height: 2;
+}
+
+.key-points strong {
+    color: #2e7d32;
+    font-family: monospace;
+    background-color: #c8e6c9;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.navigation a:hover {
+    background-color: #3498db;
+    color: white;
+}

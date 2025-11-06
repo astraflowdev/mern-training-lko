@@ -1,0 +1,204 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #34495e;
+    margin-top: 30px;
+}
+
+h3 {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.description,
+.explanation {
+    color: #666;
+    font-size: 14px;
+    margin: 10px 0;
+    font-style: italic;
+}
+
+.section-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    margin: 30px 0 20px 0;
+    border-radius: 8px;
+}
+
+.section-header h2 {
+    color: white;
+    margin: 0 0 10px 0;
+}
+
+.section-header .explanation {
+    color: #f0f0f0;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Base Flex Container */
+.flex-container {
+    display: flex;
+    background-color: #3498db;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 5px;
+    min-height: 150px;
+}
+
+/* JUSTIFY-CONTENT EXAMPLES (Main Axis Alignment) */
+
+/* Default behavior - items at the start */
+.justify-start {
+    justify-content: flex-start; /* This is the default */
+}
+
+/* Items at the end of the main axis */
+.justify-end {
+    justify-content: flex-end;
+}
+
+/* Items centered on the main axis */
+.justify-center {
+    justify-content: center;
+}
+
+/* First item at start, last item at end, space between others */
+.justify-between {
+    justify-content: space-between;
+}
+
+/* Equal space around each item (edges have half space) */
+.justify-around {
+    justify-content: space-around;
+}
+
+/* Equal space everywhere including edges */
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+/* ALIGN-ITEMS EXAMPLES (Cross Axis Alignment) */
+
+/* Items stretch to fill container height */
+.align-stretch {
+    align-items: stretch; /* This is the default */
+}
+
+/* Items aligned to top of container */
+.align-start {
+    align-items: flex-start;
+}
+
+/* Items aligned to bottom of container */
+.align-end {
+    align-items: flex-end;
+}
+
+/* Items centered vertically in container */
+.align-center {
+    align-items: center;
+}
+
+/* Perfect centering - both axes */
+.perfect-center {
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+/* Flex Item Styles */
+.flex-item {
+    background-color: #e74c3c;
+    color: white;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    min-width: 60px;
+}
+
+/* Item without fixed height (for stretch demo) */
+.flex-item-no-height {
+    background-color: #e74c3c;
+    color: white;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    min-width: 60px;
+    /* No height set - will stretch to fill container */
+}
+
+/* Taller item to demonstrate cross-axis alignment */
+.flex-item.tall {
+    padding: 40px 20px;
+    background-color: #f39c12;
+}
+
+/* Key Points Section */
+.key-points {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+}
+
+.key-points ul {
+    line-height: 2;
+}
+
+.key-points strong {
+    color: #e67e22;
+    font-family: monospace;
+    background-color: #ffe5b4;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.navigation a:hover {
+    background-color: #3498db;
+    color: white;
+}

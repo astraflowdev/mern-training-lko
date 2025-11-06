@@ -1,0 +1,356 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #34495e;
+    margin-top: 30px;
+}
+
+h4 {
+    color: #555;
+    margin: 10px 0;
+}
+
+.description,
+.explanation {
+    color: #666;
+    font-size: 14px;
+    margin: 10px 0;
+    font-style: italic;
+}
+
+section {
+    background: white;
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Base Grid Container */
+.grid-container {
+    display: grid;
+    background-color: #3498db;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 5px;
+    gap: 10px;
+}
+
+/* Grid Item Styles */
+.grid-item {
+    background-color: #e74c3c;
+    color: white;
+    padding: 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+}
+
+/* EXAMPLE 1: Grid Lines - Manual Placement */
+.grid-lines {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 100px);
+}
+
+/* Item A: Spans 2 columns (from line 1 to line 3) */
+.item-a {
+    grid-column: 1 / 3;
+    /* Shorthand for:
+       grid-column-start: 1;
+       grid-column-end: 3; */
+    background-color: #27ae60;
+}
+
+/* Item B: Spans 2 rows (from line 1 to line 3) */
+.item-b {
+    grid-row: 1 / 3;
+    /* Shorthand for:
+       grid-row-start: 1;
+       grid-row-end: 3; */
+    background-color: #f39c12;
+}
+
+/* Items C and D use default auto-placement */
+
+/* EXAMPLE 2: Span Keyword */
+.grid-span {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.span-item-1 {
+    grid-column: span 2;  /* Span across 2 columns */
+    background-color: #9b59b6;
+}
+
+.span-item-2 {
+    grid-column: span 3;  /* Span across 3 columns */
+    background-color: #1abc9c;
+}
+
+/* EXAMPLE 3: Grid Template Areas - Basic Layout */
+.layout-basic {
+    grid-template-columns: 200px 1fr 1fr;
+    grid-template-rows: 80px 300px 60px;
+
+    /* Define named areas using ASCII-art style */
+    grid-template-areas:
+        "header  header  header"
+        "sidebar content content"
+        "footer  footer  footer";
+}
+
+/* Assign elements to named areas */
+.header {
+    grid-area: header;
+    background-color: #34495e;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #95a5a6;
+}
+
+.main-content {
+    grid-area: content;
+    background-color: #3498db;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #2c3e50;
+}
+
+/* EXAMPLE 4: Complex Dashboard Layout */
+.dashboard {
+    grid-template-columns: 200px 1fr 1fr 200px;
+    grid-template-rows: 60px 150px 150px 60px;
+
+    /* Complex named area layout */
+    grid-template-areas:
+        "header  header  header  header"
+        "sidebar main    main    widget1"
+        "sidebar main    main    widget2"
+        "footer  footer  footer  footer";
+}
+
+.dash-header {
+    grid-area: header;
+    background-color: #2c3e50;
+}
+
+.dash-sidebar {
+    grid-area: sidebar;
+    background-color: #34495e;
+}
+
+.dash-main {
+    grid-area: main;
+    background-color: #3498db;
+}
+
+.dash-widget1 {
+    grid-area: widget1;
+    background-color: #27ae60;
+}
+
+.dash-widget2 {
+    grid-area: widget2;
+    background-color: #f39c12;
+}
+
+.dash-footer {
+    grid-area: footer;
+    background-color: #95a5a6;
+}
+
+/* EXAMPLE 5: Empty Cells with Dots */
+.grid-empty {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 80px 200px 60px;
+
+    /* Dots (.) create empty cells */
+    grid-template-areas:
+        "header header header"
+        ".      content .     "
+        "footer footer footer";
+}
+
+.empty-header {
+    grid-area: header;
+    background-color: #8e44ad;
+}
+
+.empty-content {
+    grid-area: content;
+    background-color: #3498db;
+}
+
+.empty-footer {
+    grid-area: footer;
+    background-color: #2c3e50;
+}
+
+/* EXAMPLE 6: Alignment within Grid Cells */
+.grid-align {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 150px;
+}
+
+/* Individual item alignment using justify-self and align-self */
+.align-start {
+    justify-self: start;   /* Horizontal: left */
+    align-self: start;     /* Vertical: top */
+    background-color: #e74c3c;
+    width: 100px;
+    height: 60px;
+}
+
+.align-center {
+    justify-self: center;  /* Horizontal: center */
+    align-self: center;    /* Vertical: center */
+    background-color: #27ae60;
+    width: 100px;
+    height: 60px;
+}
+
+.align-end {
+    justify-self: end;     /* Horizontal: right */
+    align-self: end;       /* Vertical: bottom */
+    background-color: #f39c12;
+    width: 100px;
+    height: 60px;
+}
+
+.align-stretch {
+    justify-self: stretch; /* Horizontal: full width */
+    align-self: stretch;   /* Vertical: full height */
+    background-color: #9b59b6;
+    /* No width/height - stretches to fill cell */
+}
+
+/* EXAMPLE 7: Overlapping Grid Items */
+.grid-overlap {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 80px);
+}
+
+.overlap-bg {
+    /* Row: 1 to 3, Column: 1 to 3 */
+    grid-area: 1 / 1 / 3 / 3;
+    background-color: rgba(52, 152, 219, 0.7);
+    z-index: 1;  /* Lower z-index = behind */
+}
+
+.overlap-front {
+    /* Row: 2 to 4, Column: 2 to 4 */
+    grid-area: 2 / 2 / 4 / 4;
+    background-color: rgba(231, 76, 60, 0.9);
+    z-index: 2;  /* Higher z-index = in front */
+}
+
+/* Code Explanation Box */
+.code-box {
+    background-color: #f8f9fa;
+    border-left: 4px solid #16a085;
+    padding: 15px 20px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.code-box code {
+    display: block;
+    background-color: #2d2d2d;
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    line-height: 1.6;
+}
+
+.code-box .note {
+    color: #666;
+    font-size: 13px;
+    margin: 10px 0 0 0;
+    font-style: italic;
+}
+
+/* Key Points Section */
+.key-points {
+    background-color: #e0f2f1;
+    border-left: 4px solid #009688;
+}
+
+.key-points ul {
+    line-height: 2;
+    list-style: none;
+    padding-left: 0;
+}
+
+.key-points li {
+    padding-left: 30px;
+    position: relative;
+}
+
+.key-points li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #009688;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.key-points strong {
+    color: #00695c;
+    font-family: monospace;
+    background-color: #b2dfdb;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.navigation a:hover {
+    background-color: #3498db;
+    color: white;
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 6: Grid Areas & Item Placement</title>
+    <link rel="stylesheet" href="step6-grid-areas.css">
+</head>
+
+<body>
+    <h1>Step 6: Grid Areas & Item Placement</h1>
+    <p class="description">Learn how to place grid items using line numbers, spans, and named grid areas.</p>
+
+    <!-- Example 1: Grid Lines (Placement by Numbers) -->
+    <section>
+        <h2>1. Grid Lines - Manual Placement</h2>
+        <p class="explanation">Place items using grid line numbers</p>
+        <div class="grid-container grid-lines">
+            <div class="grid-item item-a">A (spans 2 columns)</div>
+            <div class="grid-item item-b">B (spans 2 rows)</div>
+            <div class="grid-item item-c">C</div>
+            <div class="grid-item item-d">D</div>
+        </div>
+        <div class="code-box">
+            <code>
+/* Item A */
+grid-column: 1 / 3;    /* Start at line 1, end at line 3 (spans 2 columns) */
+
+/* Item B */
+grid-row: 1 / 3;       /* Start at line 1, end at line 3 (spans 2 rows) */
+            </code>
+        </div>
+    </section>
+
+    <!-- Example 2: Span Keyword -->
+    <section>
+        <h2>2. Using Span Keyword</h2>
+        <p class="explanation">Easier way to specify how many columns/rows to span</p>
+        <div class="grid-container grid-span">
+            <div class="grid-item span-item-1">Spans 2 Columns</div>
+            <div class="grid-item span-item-2">Spans 3 Columns</div>
+            <div class="grid-item span-item-3">Normal</div>
+        </div>
+        <div class="code-box">
+            <code>
+grid-column: span 2;   /* Span across 2 columns */
+grid-column: span 3;   /* Span across 3 columns */
+            </code>
+        </div>
+    </section>
+
+    <!-- Example 3: Grid Template Areas (Named Areas) -->
+    <section>
+        <h2>3. Grid Template Areas - Named Regions</h2>
+        <p class="explanation">Create a layout by naming areas - very intuitive!</p>
+        <div class="grid-container layout-basic">
+            <header class="grid-item header">Header</header>
+            <aside class="grid-item sidebar">Sidebar</aside>
+            <main class="grid-item main-content">Main Content</main>
+            <footer class="grid-item footer">Footer</footer>
+        </div>
+        <div class="code-box">
+            <code>
+/* Container */
+grid-template-areas:
+    "header  header  header"
+    "sidebar content content"
+    "footer  footer  footer";
+
+/* Items */
+.header  { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.main    { grid-area: content; }
+.footer  { grid-area: footer; }
+            </code>
+            <p class="note">Visual ASCII-art style layout definition!</p>
+        </div>
+    </section>
+
+    <!-- Example 4: Complex Layout with Named Areas -->
+    <section>
+        <h2>4. Complex Dashboard Layout</h2>
+        <p class="explanation">More complex layout with multiple named areas</p>
+        <div class="grid-container dashboard">
+            <div class="grid-item dash-header">Header/Nav</div>
+            <div class="grid-item dash-sidebar">Sidebar</div>
+            <div class="grid-item dash-main">Main Content</div>
+            <div class="grid-item dash-widget1">Widget 1</div>
+            <div class="grid-item dash-widget2">Widget 2</div>
+            <div class="grid-item dash-footer">Footer</div>
+        </div>
+        <div class="code-box">
+            <code>
+grid-template-areas:
+    "header  header  header  header"
+    "sidebar main    main    widget1"
+    "sidebar main    main    widget2"
+    "footer  footer  footer  footer";
+            </code>
+        </div>
+    </section>
+
+    <!-- Example 5: Grid with Empty Cells -->
+    <section>
+        <h2>5. Empty Cells with Dot Notation</h2>
+        <p class="explanation">Use dots (.) to leave cells empty</p>
+        <div class="grid-container grid-empty">
+            <div class="grid-item empty-header">Header</div>
+            <div class="grid-item empty-content">Content (with empty space around)</div>
+            <div class="grid-item empty-footer">Footer</div>
+        </div>
+        <div class="code-box">
+            <code>
+grid-template-areas:
+    "header header header"
+    ".      content .     "
+    "footer footer footer";
+
+/* The dots (.) create empty cells */
+            </code>
+        </div>
+    </section>
+
+    <!-- Example 6: Alignment within Grid Items -->
+    <section>
+        <h2>6. Aligning Items within Grid Cells</h2>
+        <p class="explanation">Control how items align within their grid cells</p>
+        <div class="grid-container grid-align">
+            <div class="grid-item align-start">Start</div>
+            <div class="grid-item align-center">Center</div>
+            <div class="grid-item align-end">End</div>
+            <div class="grid-item align-stretch">Stretch</div>
+        </div>
+        <div class="code-box">
+            <code>
+justify-items: start;   /* Horizontal alignment */
+align-items: center;    /* Vertical alignment */
+
+/* Or on individual items */
+justify-self: end;
+align-self: start;
+            </code>
+        </div>
+    </section>
+
+    <!-- Example 7: Overlapping Grid Items -->
+    <section>
+        <h2>7. Overlapping Grid Items</h2>
+        <p class="explanation">Items can overlap - use z-index to control stacking</p>
+        <div class="grid-container grid-overlap">
+            <div class="grid-item overlap-bg">Background</div>
+            <div class="grid-item overlap-front">Foreground (overlaps)</div>
+        </div>
+        <div class="code-box">
+            <code>
+/* Both items occupy the same grid cells */
+.overlap-bg    { grid-area: 1 / 1 / 3 / 3; z-index: 1; }
+.overlap-front { grid-area: 2 / 2 / 4 / 4; z-index: 2; }
+            </code>
+        </div>
+    </section>
+
+    <!-- Key Takeaways -->
+    <section class="key-points">
+        <h2>Key Takeaways:</h2>
+        <ul>
+            <li><strong>grid-column: 1 / 3</strong> - Place item from column line 1 to 3</li>
+            <li><strong>grid-row: 2 / 4</strong> - Place item from row line 2 to 4</li>
+            <li><strong>grid-column: span 2</strong> - Span 2 columns (easier than line numbers)</li>
+            <li><strong>grid-template-areas</strong> - Create named regions for intuitive layouts</li>
+            <li><strong>grid-area: name</strong> - Assign element to a named area</li>
+            <li><strong>. (dot)</strong> - Leave cells empty in template areas</li>
+            <li><strong>justify-items / align-items</strong> - Align all items in container</li>
+            <li><strong>justify-self / align-self</strong> - Align individual items</li>
+            <li><strong>z-index</strong> - Control stacking order of overlapping items</li>
+            <li>Grid lines are numbered starting from 1 (not 0!)</li>
+        </ul>
+    </section>
+
+    <div class="navigation">
+        <a href="step5-grid-basics.html">← Previous: Grid Basics</a>
+        <a href="index.html">Back to Home</a>
+        <a href="step7-grid-dashboard.html">Next: Grid Dashboard Example →</a>
+    </div>
+</body>
+
+</html>

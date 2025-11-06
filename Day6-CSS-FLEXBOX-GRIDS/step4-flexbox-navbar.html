@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 4: Practical Flexbox - Navigation Bar</title>
+    <link rel="stylesheet" href="step4-flexbox-navbar.css">
+</head>
+
+<body>
+    <h1>Step 4: Practical Flexbox Examples</h1>
+    <p class="description">Real-world applications of Flexbox for common layout patterns</p>
+
+    <!-- Example 1: Basic Navbar -->
+    <section>
+        <h2>Example 1: Basic Navigation Bar</h2>
+        <p class="explanation">Logo on left, navigation links on right</p>
+
+        <nav class="navbar-basic">
+            <div class="logo">MyWebsite</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="code-explanation">
+            <h4>Key CSS Properties:</h4>
+            <pre>
+.navbar-basic {
+    display: flex;
+    justify-content: space-between;  /* Logo left, links right */
+    align-items: center;              /* Vertically centered */
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;                        /* Space between links */
+}
+            </pre>
+        </div>
+    </section>
+
+    <!-- Example 2: Centered Navbar -->
+    <section>
+        <h2>Example 2: Centered Navigation</h2>
+        <p class="explanation">All items centered horizontally</p>
+
+        <nav class="navbar-centered">
+            <div class="logo">Brand</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </nav>
+
+        <div class="code-explanation">
+            <h4>Key CSS Properties:</h4>
+            <pre>
+.navbar-centered {
+    display: flex;
+    justify-content: center;    /* Center everything */
+    align-items: center;
+    gap: 40px;                  /* Space between logo and nav */
+}
+            </pre>
+        </div>
+    </section>
+
+    <!-- Example 3: Navbar with Search -->
+    <section>
+        <h2>Example 3: Navbar with Search Bar</h2>
+        <p class="explanation">Logo, growing search bar, and user actions</p>
+
+        <nav class="navbar-search">
+            <div class="logo">Logo</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="user-actions">
+                <button>Login</button>
+                <button class="signup">Sign Up</button>
+            </div>
+        </nav>
+
+        <div class="code-explanation">
+            <h4>Key CSS Properties:</h4>
+            <pre>
+.navbar-search {
+    display: flex;
+    gap: 20px;
+}
+
+.search-bar {
+    flex: 1;                    /* Grows to fill available space */
+}
+
+.search-bar input {
+    width: 100%;                /* Fill the parent container */
+}
+            </pre>
+        </div>
+    </section>
+
+    <!-- Example 4: Card Layout -->
+    <section>
+        <h2>Example 4: Responsive Card Grid</h2>
+        <p class="explanation">Cards that wrap and grow responsively</p>
+
+        <div class="card-container">
+            <div class="card">
+                <div class="card-icon">🎨</div>
+                <h3>Design</h3>
+                <p>Create beautiful user interfaces with modern design principles.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">💻</div>
+                <h3>Development</h3>
+                <p>Build robust applications with clean, maintainable code.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🚀</div>
+                <h3>Deploy</h3>
+                <p>Launch your projects with confidence and reliability.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">📊</div>
+                <h3>Analytics</h3>
+                <p>Track performance and user engagement metrics.</p>
+            </div>
+        </div>
+
+        <div class="code-explanation">
+            <h4>Key CSS Properties:</h4>
+            <pre>
+.card-container {
+    display: flex;
+    flex-wrap: wrap;              /* Allow wrapping */
+    gap: 20px;
+}
+
+.card {
+    flex: 1 1 250px;              /* Grow, shrink, min 250px */
+    /* Cards wrap when screen is too narrow */
+}
+            </pre>
+        </div>
+    </section>
+
+    <!-- Example 5: Footer Layout -->
+    <section>
+        <h2>Example 5: Footer with Multiple Columns</h2>
+        <p class="explanation">Multi-column footer that's responsive</p>
+
+        <footer class="footer">
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Security</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Guides</a></li>
+                    <li><a href="#">API</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Sales</a></li>
+                    <li><a href="#">Partners</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <div class="code-explanation">
+            <h4>Key CSS Properties:</h4>
+            <pre>
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-column {
+    flex: 1 1 200px;              /* Equal width columns that wrap */
+}
+            </pre>
+        </div>
+    </section>
+
+    <!-- Key Takeaways -->
+    <section class="key-points">
+        <h2>Key Takeaways:</h2>
+        <ul>
+            <li>Use <strong>justify-content: space-between</strong> for logo + nav patterns</li>
+            <li>Use <strong>flex: 1</strong> on search bars to make them grow</li>
+            <li>Combine <strong>flex-wrap: wrap</strong> with <strong>flex: 1 1 [min-width]</strong> for responsive grids</li>
+            <li>Use <strong>gap</strong> property instead of margins for consistent spacing</li>
+            <li><strong>align-items: center</strong> is crucial for vertical alignment in navbars</li>
+            <li>Flexbox is perfect for one-dimensional layouts (rows or columns)</li>
+        </ul>
+    </section>
+
+    <div class="navigation">
+        <a href="step3-flexbox-wrap.html">← Previous: Flex Wrap & Properties</a>
+        <a href="index.html">Back to Home</a>
+        <a href="step5-grid-basics.html">Next: CSS Grid Basics →</a>
+    </div>
+</body>
+
+</html>

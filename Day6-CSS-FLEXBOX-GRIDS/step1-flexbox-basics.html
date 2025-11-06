@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 1: Flexbox Basics - Container & Direction</title>
+    <link rel="stylesheet" href="step1-flexbox-basics.css">
+</head>
+
+<body>
+    <h1>Step 1: Flexbox Basics</h1>
+    <p class="description">Flexbox is a one-dimensional layout method for arranging items in rows or columns.</p>
+
+    <!-- Example 1: Default Flex Container (row) -->
+    <section>
+        <h2>1. Default Flex Container (flex-direction: row)</h2>
+        <p class="explanation">By default, flexbox arranges items in a row (horizontally from left to right)</p>
+        <div class="flex-container flex-row">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
+        </div>
+    </section>
+
+    <!-- Example 2: Row Reverse -->
+    <section>
+        <h2>2. Flex Direction: Row Reverse</h2>
+        <p class="explanation">Items arranged in a row but in reverse order (right to left)</p>
+        <div class="flex-container flex-row-reverse">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
+        </div>
+    </section>
+
+    <!-- Example 3: Column -->
+    <section>
+        <h2>3. Flex Direction: Column</h2>
+        <p class="explanation">Items arranged vertically from top to bottom</p>
+        <div class="flex-container flex-column">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
+        </div>
+    </section>
+
+    <!-- Example 4: Column Reverse -->
+    <section>
+        <h2>4. Flex Direction: Column Reverse</h2>
+        <p class="explanation">Items arranged vertically but in reverse order (bottom to top)</p>
+        <div class="flex-container flex-column-reverse">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
+        </div>
+    </section>
+
+    <!-- Key Takeaways -->
+    <section class="key-points">
+        <h2>Key Takeaways:</h2>
+        <ul>
+            <li><strong>display: flex</strong> - Makes an element a flex container</li>
+            <li><strong>flex-direction: row</strong> - Default, items in horizontal row (left to right)</li>
+            <li><strong>flex-direction: row-reverse</strong> - Horizontal row (right to left)</li>
+            <li><strong>flex-direction: column</strong> - Vertical column (top to bottom)</li>
+            <li><strong>flex-direction: column-reverse</strong> - Vertical column (bottom to top)</li>
+        </ul>
+    </section>
+
+    <div class="navigation">
+        <a href="index.html">Back to Home</a>
+        <a href="step2-flexbox-alignment.html">Next: Flexbox Alignment →</a>
+    </div>
+</body>
+
+</html>
